@@ -1,0 +1,165 @@
+
+Задача:
+Написать список чек листов и баг репортов на веб форму   http://itcareer.pythonanywhere.com/
+Загрузить на GitHub текстовым файлом
+
+=======================================================
+
+Требования:
+1. Обязательные поля: Name, Email, Password
+2.Поле Name, Surname принимает:
+-латинские буквы
+-цифры
+-спец символы "пробел ", "-", "_"
+-max символов 256
+-min 2 символа
+-регистр любой
+-первой должна быть буква (цифры и символы) нельзя
+-последняя не иммет значения
+3. Поле Email 
+-стандарты
+4. Поле password
+-max количество символов 16
+-min 5
+-латинские буквы
+-должен включать минимально 1 заглавную букву, 1 строчную, 1 цифру
+
+=======================================================
+
+Check list        http://itcareer.pythonanywhere.com/                                Enviroment : Windows 10, Chrome 90.0.4430.212 (64 бит)
+                                                                                                                             
+                                                                                                                        Field NAME:   
+         
+1. Empty field                                                                                                          			FAIL
+2. Boundary testing (min 2, max256)                             			
+   Enter 1 character: t								FAIL
+   Enter 2 charactes: ta								FAIL
+   Enter 3 charactes: tan								FAIL
+   Enter 124 charactes: 								FAIL
+ atatatatatattatatatatatatatata
+tattatatatatatatatat
+atattatatatatVatatatatatattatatatatatatatatatatta
+tatatatVVatatatatatattata
+Enter 255 charactes: 								FAIL
+tatatatatatattatatatatatattatatatatatattatatatatatattatatatatatatv
+tatatatatatatvvtatatatatatattatatatatatattatatatatatattatatatatata
+ttatatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatatatatat
+tatatatatatattatatatatatatvtatatatatatatvvtatatatatafg
+   Enter 256 charactes: 								FAIL
+tatatatatatattatatatatatattatatatatatattatatatatatattatatatatatatvt
+atatatatatatvvtatatatatatattatatatatatattatatatatatattatatatatatatta
+tatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatatatatatt
+atatatatatattatatatatatatvtatatatatatatvvtatatatatafgd
+   Enter 257 charactes: 								FAIL
+tatatatatatattatatatatatattatatatatatattatatatatatatta
+tatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatat
+atatattatatatatatattatatatatatatvtatatatatatatvvtatatatatatattatatat
+atatattatatatatatattatatatatatattatatatatatatvtatatatatatatvvtatatatatafgsr
+3. Enter Cyrillic letters(Таня)								PASS
+4. Enter Latin letters (Tanya)								PASS
+5. Enter a number plus Latin letters (1Tanya)						PASS
+6. Enter the symbol plus Latin letters (? Tanya)						PASS
+7. Enter Latin letters plus symbols (Tanya? /)                                                          		PASS
+8. Enter Latin letters plus a hyphen (the symbol is allowed by the requirements) (Tanya-)                     PASS
+9. Enter Latin letters plus an underscore (the symbol is allowed by the requirements) (Tanya_)            PASS
+10.Enter Latin letters plus numbers (Tanya34) 					   	PASS							
+11.Latin letters in upper case (TANYA)  							PASS
+12.Latin letters in lower case (tanya) 							PASS
+13.Enter only permitted special characters (_______)					PASS
+14.Enter only prohibited special characters (&&&&&&)					PASS
+15.Enter special characters prohibited and allowed ( &&&&_____)                                                        PASS									16.Enter a space at the beginning ( Tanya)						PASS
+17.Enter a space at the end (Tanya )							PASS
+18.Enter a space at the beginning and at the end ( Tanya )					PASS
+19.Enter tags (<script>alert("Helloword")</script>)                                                                                 PASS
+20.Bold input (<b> text </b> )								PASS
+21.Input from the clipboard                                                                                                                      PASS
+22.Enter SQL-injection
+
+
+Field SURNAME: checks the same for the name field
+
+
+
+                                                                                                                                                       Field  EMAIL:
+                                                                                                                          		
+1.email in lower case (tanik@mail.ru)								PASS
+2.email in uppercase (TANIK@mail.ru)								PASS
+3.the local part starts with a digit (5tanik@mail.ru)							PASS
+4.the local part starts with a letter (tanik@mail.ru)							PASS
+5.the local part ends with a letter (tanik@mail.ru)							PASS
+6.the local part ends with a digit (tanik7@mail.ru)							PASS
+7.the local part contains underscore (ta_nik@mail.ru) (but does not start or end with it)			PASS
+8.local part contains dot (ta.nik@mail.ru) (but does not begin or end with it)				PASS
+9.the local part contains a hyphen (ta-nik@mail.ru) (but does not start or end with it)			PASS
+10. local part of 2 characters (ta@mail.ru)							PASS
+11. local part of 64 characters (tatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatf @mail.ru)		PASS
+12. domain of two letters (or letters + numbers) (tanik@mail.ru)					PASS
+13.subdomain of two characters (letters and \ or numbers) (tanik@9mail.ru)				PASS
+14.subdomain of letter, hyphen and letter (tanik@m-t.com)						PASS
+15.subdomain + subdomain + domain (tanik@like.7d.com)						PASS						
+16.spaces only										PASS
+17.empty email  field									PASS
+18.special signs in the local part (#%^$@mail.ru)							PASS
+19.contains spaces in the local part (ta  nik@mail.ru)						PASS
+20.the local part starts with a dot (.tanik@ mail.ru)							PASS
+21.the local part starts with a hyphen (-tanik @mail.ru)						PASS
+22.the local part starts with an underscore (_tanik@mail.ru)						PASS
+23.the local part ends with a dot (tanik.@ mail.ru)							PASS
+24. the local part ends with a hyphen (tanik -@mail.ru)						PASS
+25. The local part ends with underscore (tanik_@mail.ru)						PASS
+26.the local part contains points in a row (ta…nik@ mail.ru)						PASS
+27. the local part contains underscores in a row (ta__nik@mail.ru)					PASS
+28. the local part contains hyphens in a row (ta—nik@mail.ru)					PASS
+29. the local part contains a combination of allowed special characters (ta.-_.nik@mail.ru)			PASS
+30. local part of 3 characters (tes@mail.ru)							PASS
+31. local part of 33 characters (dashadashadashadashadashadashadas@mail.ru)			PASS
+32.empty local part (@mail.ru)								PASS
+33. empty domain part (tanik@)								PASS
+34. empty local and domain parts (@)								PASS
+35. two @@ signs in a row (tanik@@ mail.ru)							PASS
+36. two @@ signs separated by symbols (ta@ta@ mail.ru)						PASS
+37. does not contain @ sign (tanyamail.ru)							PASS
+38. the domain part does not contain a dot (tanika@mailru)						PASS
+39. subdomain starting with a dot (tanik@ .mail.ru)							PASS
+40. subdomain starting with a hyphen (tanik@-mail.ru)						PASS
+41. subdomain starting with underscore (tanik @_mail.ru)						PASS
+42. domain starting with a hyphen (tanik@mail.-ru)						PASS
+43. domain starting with underscore (tanik @mail._ru)						PASS
+44. subdomain ending with a hyphen (tanik @mail-.ru)						PASS
+45. subdomain ending with underscore (tanik @mail_.ru)						PASS
+46. domain part ending with a dot (tanik @mail.ru.)						PASS
+47. domain part ending with a hyphen (tanik @mail.ru-)						PASS
+48.domain part ending with underscore (tanik @mail.ru_)						PASS
+49. the domain part contains dots in a row (tanik @ mail..ru)						PASS
+50. the domain part contains hyphens in a row (tanik@ma—il.ru)					PASS
+51. the domain part contains underscores in a row (tanik@ma_il.ru)					PASS
+52. the domain part contains a combination of allowed special characters (tanik@ma-_il.ru)			PASS
+53. first level domain of one character (tanik@mail.r)						PASS
+54.subdomain of one character (tanik@m.ru)							PASS
+55. has special signs in the domain part (tanik@#$.ru)						PASS
+56.contains spaces in the domain part (tanik@ mail .ru)						PASS
+57. the domain contains only numbers (tanik@894)						PASS
+58.spaces before and after the email (   tanik@mail.ru  )						PASS
+
+
+                                                                                                              Field  PASSWORD:
+
+1.Enter password with minimum 1 uppercase latin letter, 1 lowercase latin letter and 1 digit (1Tnvjkn)			PASS
+2.Boundary testing (min 5, max 16)
+  Enter password with 4 characters (1Tbc)								PASS
+  Enter password with 5 characters (1Tbcv)								PASS
+  Enter password with 6 characters (1Tbcve)								PASS
+  Enter password with 9 characters (1Tbcve123)								PASS
+  Enter password with 15 characters (1Tbcve123dvdtno)							PASS
+  Enter password with 16 characters (1Tbcve123dvdtnop)							PASS
+  Enter password with 17 characters (1Tbcve123dvdtnopo)							PASS
+3.Empty field                                                                                                                                                                           PASS
+4.Enter password with 1 uppercase cyrillic letter, 1 lowercase cyrillic letter and 1 digit (1Tv)                                                  PASS
+5.Enter latin letters (Dclgbt)  										PASS
+6.Enter cyrillic letters (Олиждв)									PASS
+7.Enter password only with  uppercase latin letters (HCDRTYUHJL)						PASS
+8.Enter password only with lowercase letters (njnjkjk;d.)							PASS
+9.Enter password only with digits (4567890)								PASS
+10. Enter password with special signs (GG6nml,&0)							PASS
+11. Spaces only											PASS
+12.Spaces before and after the password( 1Tnvjkn )							PASS
