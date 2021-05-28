@@ -61,7 +61,7 @@ Expected result	Success
 
 Bug ID	                 1.1.3
 Enviroment               Windows 10, Chrome 90.0.4430.212 (64 бит)
-Summary	 Registration passes with the first digit plus letters in the name field
+Summary	 There is no error message during registration process with invalid name (1Tanya)
 Severity	                 Major
 Priority	
 Status	                Open
@@ -78,7 +78,7 @@ Expected result	Error
 
 Bug ID	                 1.1.4
 Enviroment              Windows 10, Chrome 90.0.4430.212 (64 бит)
-Summary	Registration passes with the first special characters plus letters in the name field
+Summary	There is no error message during registration process with invalid name (?Tanya)
 Severity	                Major
 Priority	
 Status	                Open
@@ -97,7 +97,7 @@ Expected result	Error
 
 Bug ID	                 1.1.5
 Enviroment              Windows 10, Chrome 90.0.4430.212 (64 бит)
-Summary	Registration passes with only special characters in the name field
+Summary	There is no error message during registration process with invalid name (&&&&&&)
 Severity	                Major
 Priority	
 Status	                Open
