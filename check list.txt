@@ -147,22 +147,22 @@ Field SURNAME: checks the same for the  field Name
 
                                                                                  Field  PASSWORD:
 
-1.Enter password with minimum 1 uppercase latin letter, 1 lowercase latin letter and 1 digit (1Tnvjkn)			PASS
+1.Enter password with minimum 1 uppercase latin letter, 1 lowercase latin letter and 1 digit (1Tnvjkn)			                                      PASS
 2.Boundary testing (min 5, max 16)
-  Enter password with 4 characters (1Tbc)								PASS
-  Enter password with 5 characters (1Tbcv)								PASS
-  Enter password with 6 characters (1Tbcve)								PASS
-  Enter password with 9 characters (1Tbcve123)								PASS
-  Enter password with 15 characters (1Tbcve123dvdtno)							PASS
-  Enter password with 16 characters (1Tbcve123dvdtnop)							PASS
-  Enter password with 17 characters (1Tbcve123dvdtnopo)							PASS
-3.Empty field                                                                                                                                                                           PASS
+  Enter password with 4 characters (1Tbc)								                                                                                          PASS
+  Enter password with 5 characters (1Tbcv)								                                                                                        PASS
+  Enter password with 6 characters (1Tbcve)								                                                                                        PASS
+  Enter password with 9 characters (1Tbcve123)								                                                                                    PASS
+  Enter password with 15 characters (1Tbcve123dvdtno)							                                                                                PASS
+  Enter password with 16 characters (1Tbcve123dvdtnop)							                                                                              PASS
+  Enter password with 17 characters (1Tbcve123dvdtnopo)							                                                                              PASS
+3.Empty field                                                                                                                                                                                                                                                                                                                       PASS
 4.Enter password with 1 uppercase cyrillic letter, 1 lowercase cyrillic letter and 1 digit (1Tv)                                                  PASS
-5.Enter latin letters (Dclgbt)  										PASS
-6.Enter cyrillic letters (Олиждв)									PASS
-7.Enter password only with  uppercase latin letters (HCDRTYUHJL)						PASS
-8.Enter password only with lowercase letters (njnjkjk;d.)							PASS
-9.Enter password only with digits (4567890)								PASS
-10. Enter password with special signs (GG6nml,&0)							PASS
-11. Spaces only											                                                                         PASS
-12.Spaces before and after the password( 1Tnvjkn )							                                             PASS
+5.Enter latin letters (Dclgbt)  										                                                                                              PASS
+6.Enter cyrillic letters (Олиждв)									                                                                                                PASS
+7.Enter password only with  uppercase latin letters (HCDRTYUHJL)						                                                                      PASS
+8.Enter password only with lowercase letters (njnjkjk;d.)							                                                                            PASS
+9.Enter password only with digits (4567890)								                                                                                        PASS
+10. Enter password with special signs (GG6nml,&0)							                                                                                    PASS
+11. Spaces only											                                                                                                              PASS
+12.Spaces before and after the password( 1Tnvjkn )							                                                                                  PASS
