@@ -28,68 +28,71 @@
 
 Check list        http://itcareer.pythonanywhere.com/                                Enviroment : Windows 10, Chrome 90.0.4430.212 (64 бит)
                                                                                                                              
-                                                                                                                        Field NAME:   
-         
-1. Empty field                                                                                                          			FAIL
+                                                                         Field NAME:  
+                                                                         
+   Enter valid name (Tanya)                                                                        PASS
+1. Empty field                                                                                     FAIL
 2. Boundary testing (min 2, max256)                             			
-   Enter 1 character: t								FAIL
-   Enter 2 charactes: ta								FAIL
-   Enter 3 charactes: tan								FAIL
-   Enter 124 charactes: 								FAIL
+   -Enter 1 character: t								                                                           FAIL
+   -Enter 2 charactes: ta								                                                           FAIL
+   -Enter 3 charactes: tan								                                                         FAIL
+   -Enter 124 charactes: 								                                                           FAIL
  atatatatatattatatatatatatatata
 tattatatatatatatatat
 atattatatatatVatatatatatattatatatatatatatatatatta
 tatatatVVatatatatatattata
-Enter 255 charactes: 								FAIL
+   -Enter 255 charactes: 								                                                           FAIL
 tatatatatatattatatatatatattatatatatatattatatatatatattatatatatatatv
 tatatatatatatvvtatatatatatattatatatatatattatatatatatattatatatatata
 ttatatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatatatatat
 tatatatatatattatatatatatatvtatatatatatatvvtatatatatafg
-   Enter 256 charactes: 								FAIL
+   -Enter 256 charactes: 								                                                           FAIL
 tatatatatatattatatatatatattatatatatatattatatatatatattatatatatatatvt
 atatatatatatvvtatatatatatattatatatatatattatatatatatattatatatatatatta
 tatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatatatatatt
 atatatatatattatatatatatatvtatatatatatatvvtatatatatafgd
-   Enter 257 charactes: 								FAIL
+   -Enter 257 charactes: 								                                                           FAIL
 tatatatatatattatatatatatattatatatatatattatatatatatatta
 tatatatatatvtatatatatatatvvtatatatatatattatatatatatattatatat
 atatattatatatatatattatatatatatatvtatatatatatatvvtatatatatatattatatat
 atatattatatatatatattatatatatatattatatatatatatvtatatatatatatvvtatatatatafgsr
-3. Enter Cyrillic letters(Таня)								PASS
-4. Enter Latin letters (Tanya)								PASS
-5. Enter a number plus Latin letters (1Tanya)						PASS
-6. Enter the symbol plus Latin letters (? Tanya)						PASS
-7. Enter Latin letters plus symbols (Tanya? /)                                                          		PASS
-8. Enter Latin letters plus a hyphen (the symbol is allowed by the requirements) (Tanya-)                     PASS
-9. Enter Latin letters plus an underscore (the symbol is allowed by the requirements) (Tanya_)            PASS
-10.Enter Latin letters plus numbers (Tanya34) 					   	PASS							
-11.Latin letters in upper case (TANYA)  							PASS
-12.Latin letters in lower case (tanya) 							PASS
-13.Enter only permitted special characters (_______)					PASS
-14.Enter only prohibited special characters (&&&&&&)					PASS
-15.Enter special characters prohibited and allowed ( &&&&_____)                                                        PASS									16.Enter a space at the beginning ( Tanya)						PASS
-17.Enter a space at the end (Tanya )							PASS
-18.Enter a space at the beginning and at the end ( Tanya )					PASS
-19.Enter tags (<script>alert("Helloword")</script>)                                                                                 PASS
-20.Bold input (<b> text </b> )								PASS
-21.Input from the clipboard                                                                                                                      PASS
+3. Enter Cyrillic letters(Таня)								                                                     PASS
+4. Enter Latin letters (Tannya)								                                                     PASS
+5. Enter a number plus Latin letters (1Tanya)						                                           PASS
+6. Enter the symbol plus Latin letters (? Tanya)						                                       PASS
+7. Enter Latin letters plus symbols (Tanya? /)                                                     PASS
+8. Enter Latin letters plus a hyphen (the symbol is allowed by the requirements) (Tanya-)          PASS
+9. Enter Latin letters plus an underscore (the symbol is allowed by the requirements) (Tanya_)     PASS
+10.Enter Latin letters plus numbers (Tanya34) 					   	                                       PASS							
+11.Latin letters in upper case (TANYA)  							                                             PASS
+12.Latin letters in lower case (tanya) 							                                               PASS
+13.Enter only permitted special characters (_______)					                                     PASS
+14.Enter only prohibited special characters (&&&&&&)					                                     PASS
+15.Enter special characters prohibited and allowed ( &&&&_____)                                    PASS									
+16.Enter a space at the beginning ( Tanya)						                                             PASS
+17.Enter a space at the end (Tanya )							                                                 PASS
+18.Enter a space at the beginning and at the end ( Tanya )					                               PASS
+19.Enter tags (<script>alert("Helloword")</script>)                                                PASS
+20.Bold input (<b> text </b> )								                                                     PASS
+21.Input from the clipboard                                                                        PASS
 22.Enter SQL-injection
 
 
-Field SURNAME: checks the same for the name field
+Field SURNAME: checks the same for the  field Name
 
 
 
-                                                                                                                                                       Field  EMAIL:
+                                                                            Field  EMAIL:
+                                                                            
                                                                                                                           		
-1.email in lower case (tanik@mail.ru)								PASS
-2.email in uppercase (TANIK@mail.ru)								PASS
-3.the local part starts with a digit (5tanik@mail.ru)							PASS
-4.the local part starts with a letter (tanik@mail.ru)							PASS
-5.the local part ends with a letter (tanik@mail.ru)							PASS
-6.the local part ends with a digit (tanik7@mail.ru)							PASS
-7.the local part contains underscore (ta_nik@mail.ru) (but does not start or end with it)			PASS
-8.local part contains dot (ta.nik@mail.ru) (but does not begin or end with it)				PASS
+1.email in lower case (tanik@mail.ru)								                                                       PASS
+2.email in uppercase (TANIK@mail.ru)								                                                       PASS
+3.the local part starts with a digit (5tanik@mail.ru)							                                         PASS
+4.the local part starts with a letter (tanik@mail.ru)							                                         PASS
+5.the local part ends with a letter (tanik@mail.ru)							                                           PASS
+6.the local part ends with a digit (tanik7@mail.ru)							                                           PASS
+7.the local part contains underscore (ta_nik@mail.ru) (but does not start or end with it)			             PASS
+8.local part contains dot (ta.nik@mail.ru) (but does not begin or end with it)				                     PASS
 9.the local part contains a hyphen (ta-nik@mail.ru) (but does not start or end with it)			PASS
 10. local part of 2 characters (ta@mail.ru)							PASS
 11. local part of 64 characters (tatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatf @mail.ru)		PASS
