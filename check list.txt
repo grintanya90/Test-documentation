@@ -93,9 +93,9 @@ Field SURNAME: checks the same for the  field Name
 6.the local part ends with a digit (tanik7@mail.ru)							                                           PASS
 7.the local part contains underscore (ta_nik@mail.ru) (but does not start or end with it)			             PASS
 8.local part contains dot (ta.nik@mail.ru) (but does not begin or end with it)				                     PASS
-9.the local part contains a hyphen (ta-nik@mail.ru) (but does not start or end with it)			PASS
-10. local part of 2 characters (ta@mail.ru)							PASS
-11. local part of 64 characters (tatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatf @mail.ru)		PASS
+9.the local part contains a hyphen (ta-nik@mail.ru) (but does not start or end with it)			               PASS
+10. local part of 2 characters (ta@mail.ru)							                                                   PASS
+11. local part of 64 characters (tatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatf @mail.ru) PASS
 12. domain of two letters (or letters + numbers) (tanik@mail.ru)					PASS
 13.subdomain of two characters (letters and \ or numbers) (tanik@9mail.ru)				PASS
 14.subdomain of letter, hyphen and letter (tanik@m-t.com)						PASS
@@ -145,7 +145,7 @@ Field SURNAME: checks the same for the  field Name
 58.spaces before and after the email (   tanik@mail.ru  )						PASS
 
 
-                                                                                                              Field  PASSWORD:
+                                                                                 Field  PASSWORD:
 
 1.Enter password with minimum 1 uppercase latin letter, 1 lowercase latin letter and 1 digit (1Tnvjkn)			PASS
 2.Boundary testing (min 5, max 16)
@@ -164,5 +164,5 @@ Field SURNAME: checks the same for the  field Name
 8.Enter password only with lowercase letters (njnjkjk;d.)							PASS
 9.Enter password only with digits (4567890)								PASS
 10. Enter password with special signs (GG6nml,&0)							PASS
-11. Spaces only											PASS
-12.Spaces before and after the password( 1Tnvjkn )							PASS
+11. Spaces only											                                                                         PASS
+12.Spaces before and after the password( 1Tnvjkn )							                                             PASS
